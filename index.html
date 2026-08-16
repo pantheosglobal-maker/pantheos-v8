@@ -35,12 +35,34 @@
 <div class="hero-overlay">
 <h1>Level Up Faster</h1>
 <p>Fast • Secure • Trusted Game Top-Ups</p>
-<a href="#games" class="btn">Shop Now</a>
+<a href="#games" class="btn">SHOP NOW</a>
 </div>
 </section>
 
 <section class="search-section">
 <input type="text" placeholder="Search your game...">
+</section>
+
+<section class="trust-section">
+<div class="trust-card">
+<h3>5000+</h3>
+<p>Orders Delivered</p>
+</div>
+
+<div class="trust-card">
+<h3>24/7</h3>
+<p>Customer Support</p>
+</div>
+
+<div class="trust-card">
+<h3>Fast</h3>
+<p>Delivery Service</p>
+</div>
+
+<div class="trust-card">
+<h3>Secure</h3>
+<p>Payments</p>
+</div>
 </section>
 
 <section id="games" class="games-section">
@@ -49,43 +71,43 @@
 
 <div class="games-grid">
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('Mobile Legends')">
 <img src="assets/mlbb-logo.jpg">
 <h3>Mobile Legends</h3>
 <p>Diamond Top Up</p>
 </div>
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('BGMI')">
 <img src="assets/bgmi-logo.jpg">
 <h3>BGMI</h3>
 <p>UC Top Up</p>
 </div>
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('Free Fire')">
 <img src="assets/freefire-logo.jpg">
 <h3>Free Fire</h3>
 <p>Diamond Top Up</p>
 </div>
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('COD Mobile')">
 <img src="assets/codm-logo.jpg">
 <h3>COD Mobile</h3>
 <p>CP Top Up</p>
 </div>
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('Valorant')">
 <img src="assets/valorant-logo.jpg">
 <h3>Valorant</h3>
 <p>VP Top Up</p>
 </div>
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('Genshin Impact')">
 <img src="assets/genshin-logo.jpg">
 <h3>Genshin Impact</h3>
 <p>Genesis Crystals</p>
 </div>
 
-<div class="game-card">
+<div class="game-card" onclick="openOrder('Honkai Star Rail')">
 <img src="assets/hsr-logo.jpg">
 <h3>Honkai Star Rail</h3>
 <p>Oneiric Shards</p>
@@ -101,7 +123,11 @@
 
 <img src="assets/qr-payment.jpg" class="payment-qr">
 
+<h3>UPI Payment</h3>
+
 <p>Scan QR and send payment screenshot through WhatsApp.</p>
+
+<p>Fast verification and delivery.</p>
 
 </section>
 
@@ -138,9 +164,55 @@
 
 <p>Need help? Contact us anytime.</p>
 
-<a href="#" class="btn">Contact Support</a>
+<a href="#" class="btn">CONTACT SUPPORT</a>
 
 </section>
+
+<section class="faq-section">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>How long is delivery?</h3>
+<p>Usually within 1–15 minutes after payment verification.</p>
+</div>
+
+<div class="faq-item">
+<h3>What payment methods are accepted?</h3>
+<p>UPI QR Payment.</p>
+</div>
+
+<div class="faq-item">
+<h3>How can I contact support?</h3>
+<p>Telegram, WhatsApp and Instagram.</p>
+</div>
+
+</section>
+
+<div id="orderModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeOrder()">&times;</span>
+
+<h2 id="selectedGame">Game Order</h2>
+
+<input type="text" id="gameId" placeholder="Game ID">
+
+<input type="text" id="serverId" placeholder="Server ID">
+
+<select id="packageSelect">
+<option>Select Package</option>
+<option>Starter Package</option>
+<option>Standard Package</option>
+<option>Premium Package</option>
+</select>
+
+<button onclick="sendOrder()">Order via WhatsApp</button>
+
+</div>
+
+</div>
 
 <footer>
 
